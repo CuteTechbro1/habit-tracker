@@ -1,0 +1,5 @@
+# Runtime dependencies (mirrors [project.dependencies] in pyproject.toml)
+click>=8.1
+
+# Development dependencies (mirrors [project.optional-dependencies].dev)
+pytest>=8.0

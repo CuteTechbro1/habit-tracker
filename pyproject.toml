@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "habit-tracker"
+version = "0.1.0"
+description = "A command-line habit tracker with daily and weekly habits and streak analytics."
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "click>=8.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+]
+
+[project.scripts]
+habit = "habit_tracker.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["habit_tracker*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
